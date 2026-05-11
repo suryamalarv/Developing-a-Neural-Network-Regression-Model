@@ -4,7 +4,21 @@
 To develop a neural network regression model for the given dataset.
 
 ## THEORY
-Explain the problem statement
+A Neural Network Regression Model is a deep learning technique used to predict continuous numerical values from input data. In this program, the regression model is implemented using the PyTorch library. The model learns the relationship between input and output values through training and minimizes prediction error using optimization techniques.
+
+The dataset is first loaded using the Pandas library. The input and output values are separated into features (X) and target values (y). The dataset is divided into training and testing data using train_test_split() from Scikit-learn. Data normalization is performed using MinMaxScaler to scale the values between 0 and 1, which improves the training performance of the neural network.
+
+The neural network consists of:
+
+Input Layer – accepts one input feature. Hidden Layers – two fully connected layers with 8 and 10 neurons. Activation Function – ReLU (Rectified Linear Unit) introduces non-linearity. Output Layer – produces a single continuous numerical output.
+
+The model is created by inheriting the nn.Module class in PyTorch. Forward propagation is implemented in the forward() function, where input data passes through hidden layers and activation functions to generate predictions.
+
+The training process uses:
+
+Loss Function: Mean Squared Error (MSELoss), which calculates the difference between predicted and actual values. Optimizer: RMSprop optimizer, which updates model weights efficiently during backpropagation. Epochs: The model is trained repeatedly for 2000 iterations to reduce loss.
+
+During training, the loss value is stored and plotted using Matplotlib to visualize model learning performance. After training, the model is evaluated using test data, and predictions are generated for new input values.
 
 ## Neural Network Model
 <img width="852" height="634" alt="image" src="https://github.com/user-attachments/assets/8d5afcac-cb9d-48d0-abaa-1fe42e2bdda5" />
